@@ -456,4 +456,102 @@ footer {
     .social-icons {
         flex-wrap: wrap;
     }
+}
+
+/* 添加汉堡菜单按钮样式 */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+/* 移动端导航样式调整 */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .top-nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .top-nav ul.active {
+        display: flex;
+    }
+
+    .top-nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .banner {
+        margin-top: 60px;
+        height: 200px; /* 降低移动端banner高度 */
+    }
+}
+
+/* 优化卡片布局 */
+@media (max-width: 768px) {
+    .hero-cards {
+        padding: 20px 15px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .work-card {
+        margin-bottom: 20px;
+    }
+
+    /* 调整新闻部分间距 */
+    .news-section {
+        padding: 0 15px;
+    }
+
+    .timeline-item {
+        padding: 10px 0 10px 20px;
+    }
+
+    /* 调整页脚样式 */
+    .footer-content {
+        gap: 30px;
+        padding: 0 15px;
+    }
+}
+
+/* 优化字体大小 */
+@media (max-width: 480px) {
+    .card h3 {
+        font-size: 14px;
+    }
+
+    .work-content h3 {
+        font-size: 16px;
+    }
+
+    .news-section h2,
+    .work-at-baidu h2,
+    .company-intro h2 {
+        font-size: 20px;
+    }
 } 
