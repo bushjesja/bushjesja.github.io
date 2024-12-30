@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 横幅图片 */
+.banner {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 60px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 顶部导航 */
+.top-nav {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 30px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.top-nav a:hover {
+    color: #3388ff;
+}
+
+/* 卡片部分 */
+.hero-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    flex: 1;
+    max-width: 380px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* 新闻部分 */
+.news-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.news-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.news-container {
+    display: flex;
+    gap: 40px;
+}
+
+.news-left {
+    flex: 1;
+}
+
+.news-right {
+    flex: 1;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #eee;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 15px 0;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 22px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3388ff;
+}
+
+.timeline-item .date {
+    color: #999;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.timeline-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+}
+
+.timeline-item a:hover {
+    color: #3388ff;
+}
+
+.more-news {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    color: #3388ff;
+    text-decoration: none;
+}
+
+.special-topics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.topic-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.topic-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.topic-card h4 {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    background: rgba(255,255,255,0.9);
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column;
+    }
+    
+    .special-topics {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 页脚 */
+footer {
+    background-color: #f5f5f5;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-section a:hover {
+    color: #3388ff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    color: #999;
+    font-size: 12px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+}
+
+/* 工作在百度部分 */
+.work-at-baidu {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.work-at-baidu h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.work-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.work-card {
+    flex: 1;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-10px);
+}
+
+.work-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.work-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+}
+
+.work-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.learn-more {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.learn-more:hover {
+    opacity: 1;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .work-container {
+        flex-direction: column;
+    }
+
+    .work-card {
+        height: 250px;
+    }
+
+    .work-card img {
+        height: 100%;
+    }
+}
+
+/* 公司介绍部分 */
+.company-intro {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.company-intro h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.intro-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    aspect-ratio: 16/9;
+}
+
+.intro-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.intro-card:hover img {
+    transform: scale(1.05);
+}
+
+.intro-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+}
+
+.intro-overlay h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* 更新底部样式 */
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 30px;
+    width: auto;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-icons {
+        flex-wrap: wrap;
+    }
+} 
