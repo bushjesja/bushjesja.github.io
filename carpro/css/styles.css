@@ -95,9 +95,12 @@ body {
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem 15px;
+        position: relative;
     }
 
     .nav-right {
+        position: absolute;
+        right: 15px;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -107,6 +110,7 @@ body {
         display: flex;
         align-items: center;
         gap: 10px;
+        margin-right: 40px;
     }
 
     .nav-links {
@@ -135,14 +139,9 @@ body {
     }
 
     .hamburger-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-        z-index: 999;
-        margin-left: 10px;
+        position: absolute;
+        right: 15px;
+        margin-left: 0;
     }
 
     .hamburger-menu span {
@@ -166,6 +165,20 @@ body {
     .hamburger-menu.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
         background: #fff;
+    }
+
+    .register-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 14px;
+    }
+
+    .message-icon, .notification-icon {
+        font-size: 18px;
+    }
+
+    .notification-badge {
+        font-size: 10px;
+        padding: 1px 4px;
     }
 }
 
