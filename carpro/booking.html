@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预约 - CAR PRO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">主页</a>
+            <a href="about.html">关于我们</a>
+            <a href="services.html">我们的服务</a>
+            <a href="staff.html">员工介绍</a>
+        </div>
+        <div class="nav-right">
+            <div class="nav-buttons">
+                <a href="#" class="message-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </a>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    立即登录
+                </button>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="booking-container">
+        <!-- 预约流程导航 -->
+        <div class="booking-steps">
+            <div class="step active">
+                <i class="fas fa-map-marker-alt"></i>
+                时间地点
+            </div>
+            <div class="step">
+                <i class="fas fa-car"></i>
+                车辆信息
+            </div>
+            <div class="step">
+                <i class="fas fa-list-alt"></i>
+                项目内容
+            </div>
+            <div class="step">
+                <i class="fas fa-check-circle"></i>
+                完成预约
+            </div>
+        </div>
+
+        <h1>时间地点</h1>
+        
+        <!-- 地图区域 -->
+        <div class="map-container">
+            <div id="map">
+                <!-- 这里将通过JavaScript加载实际的地图 -->
+                <img src="images/7.png" alt="地图预览">
+            </div>
+        </div>
+
+        <!-- 预约表单 -->
+        <div class="booking-form">
+            <div class="form-group">
+                <label>选择门店</label>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Select Location">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>预约日期</label>
+                <div class="date-input">
+                    <i class="far fa-calendar"></i>
+                    <input type="text" value="3 July 2023" readonly>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>时间</label>
+                <div class="time-select">
+                    <select>
+                        <option>22:30</option>
+                        <option>23:00</option>
+                        <option>23:30</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button class="next-btn">下一步</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 - 无分割线版本 -->
+    <footer class="footer no-border">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="CAR PRO">
+            </div>
+            <div class="contact-info">
+                <h3>Напишите нам:</h3>
+                <p><i class="fas fa-phone"></i> +7 (964) 123-45-67</p>
+                <p><i class="fas fa-comment"></i> +7 (964) 123-45-67</p>
+            </div>
+            <div class="working-hours">
+                <h3>График работы:</h3>
+                <p>Ежедневно с 09:00 до 23:00</p>
+                <p><i class="fas fa-map-marker-alt"></i> г. Владивxxxxxxxx,<br> xxxxxxxxxxxa, 49</p>
+            </div>
+        </div>
+        
+        <!-- 地图横幅 -->
+        <div class="footer-map">
+            <img src="images/2.png" alt="Map">
+           
+        </div>
+        
+        <!-- 版权声明 -->
+        <div class="copyright" style="display: flex; justify-content: space-between; align-items: center;">
+            <p>© 2024 carpro.</p>
+            <img src="images/22.png" alt="logo" style="width: 35px; height: 35px; cursor: pointer; background: #FF6B00; border-radius: 50%; padding: 8px;">
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // 点击导航链接时关闭菜单
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // 点击页面其他地方关闭菜单
+            document.addEventListener('click', function(event) {
+                if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

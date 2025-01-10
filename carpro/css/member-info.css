@@ -1,0 +1,256 @@
+/* 页面整体布局 */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+}
+
+/* 会员信息页面样式 */
+.member-info-container {
+    display: flex;
+    gap: 2rem;
+    padding: 80px 5% 2rem;
+    background-color: #000;
+}
+
+/* 左侧用户信息卡片样式 */
+.user-info-card {
+    width: 423px;
+    height: 802px;
+    background: rgba(41, 41, 41, 1);
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 用户头像和基本信息 */
+.user-info {
+    margin-bottom: 2rem;
+}
+
+.user-avatar {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1.5rem;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 用户菜单 */
+.user-menu {
+    margin-top: 2rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu-item i {
+    font-size: 1.2rem;
+}
+
+.menu-item:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.menu-item.active {
+    color: #fff;
+    background: #000;
+    border-radius: 8px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
+}
+
+.user-name i {
+    color: #007bff;
+}
+
+.user-id {
+    color: #888;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.user-id i {
+    color: #FFD700;
+    margin-left: 0.5rem;
+}
+
+.user-details {
+    font-size: 0.85rem;
+}
+
+.user-details p {
+    margin: 0.2rem 0;
+    color: #CCC;
+}
+
+.user-details span {
+    color: #888;
+    margin-right: 0.3rem;
+}
+
+/* 右侧内容区域样式 */
+.content-area {
+    position: relative;
+    flex: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .member-info-container {
+        flex-direction: column;
+    }
+
+    .user-info-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .member-info-container {
+        padding: 2rem;
+    }
+}
+
+/* 会员卡片样式 */
+.member-card {
+    position: absolute;
+    left: 627px;
+    top: 219.02px;
+    width: 940px;
+    height: 403.98px;
+    background: linear-gradient(148.48deg, 
+        rgba(254, 228, 182, 1) 0%, 
+        rgba(253, 205, 121, 1) 59.21%, 
+        rgba(248, 212, 140, 1) 100%
+    );
+    border-radius: 30px;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 1);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 移除之前的装饰图案 */
+.member-card::before,
+.member-card::after {
+    display: none;
+}
+
+/* 会员信息布局 */
+.member-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.member-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.member-title i {
+    color: #FF6B00;
+    font-size: 2rem;
+}
+
+.member-title h2 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.member-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 进度条区域 */
+.progress-section {
+    position: relative;
+    z-index: 1;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.progress-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(255, 107, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 100%;
+    background: #FF6B00;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.points {
+    position: absolute;
+    right: 0;
+    top: -24px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* 下方深色背景块 */
+.dark-panel {
+    width: 100%;
+    height: 362px;
+    background: rgba(41, 41, 41, 1);
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 响应式调整 */
+@media (max-width: 1600px) {
+    .member-card {
+        position: static;
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        margin-bottom: 2rem;
+    }
+} 

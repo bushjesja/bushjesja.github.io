@@ -1,0 +1,466 @@
+/* 预约页面整体样式 */
+body {
+    background-color: #ffffff;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* 预约步骤导航 */
+.booking-steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 5%;
+    margin-top: 80px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #999;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.step i {
+    font-size: 1.2rem;
+}
+
+.step.active {
+    color: #333;
+}
+
+.step.active i {
+    color: #FF6B00;
+}
+
+/* 预约内容容器 */
+.booking-container {
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.booking-container h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* 地图容器 */
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+}
+
+#map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 预约表单 */
+.booking-form {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+/* 搜索框样式 */
+.search-box {
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background: #f5f5f5;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #FF6B00;
+}
+
+/* 日期输入框 */
+.date-input {
+    position: relative;
+}
+
+.date-input i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.date-input input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background: #f5f5f5;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* 时间选择 */
+.time-select select {
+    width: 100%;
+    padding: 1rem;
+    background: #f5f5f5;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+/* 表单操作按钮 */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.next-btn {
+    padding: 1rem 2rem;
+    background: #FF6B00;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-btn:hover {
+    background: #ff8533;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .booking-steps {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .booking-form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .step {
+        font-size: 0.9rem;
+    }
+}
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.logo {
+    height: 40px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FF6B00;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background: #FF6B00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background: #ff8533;
+}
+
+.message-icon, .notification-icon {
+    color: #666;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #FF6B00;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/* 响应式导航栏 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 20px;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: auto;
+    }
+
+    .nav-buttons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        z-index: 998;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        color: #fff;
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 999;
+        margin-left: 15px;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        transition: 0.3s;
+    }
+
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .message-icon, .notification-icon {
+        color: #666;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .notification-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: #FF6B00;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 10px;
+    }
+
+    .logout-btn {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 15px;
+        background: #FF6B00;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .logout-btn i {
+        font-size: 16px;
+    }
+
+    .booking-steps {
+        margin-top: 60px;
+        padding: 1rem;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .step {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .booking-container {
+        padding: 1rem;
+    }
+
+    .booking-container h1 {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .map-container {
+        height: 250px;
+        margin-bottom: 1rem;
+    }
+
+    .booking-form {
+        padding: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .search-box input,
+    .date-input input,
+    .time-select select {
+        padding: 0.8rem 1rem 0.8rem 2.5rem;
+        font-size: 14px;
+    }
+
+    .form-actions {
+        margin-top: 1.5rem;
+    }
+
+    .next-btn {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: auto;
+    }
+} 

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会员信息 - CAR PRO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/member-info.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="CAR PRO">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">主页</a>
+            <a href="booking.html">关于我们</a>
+            <a href="booking.html">我们的服务</a>
+            <a href="index.html">员工介绍</a>
+        </div>
+        <div class="nav-right">
+            <div class="nav-buttons">
+                <button class="register-btn">立即登录 <i class="fas fa-arrow-right"></i></button>
+                <a href="#" class="message-icon"><i class="far fa-envelope"></i></a>
+                <a href="#" class="notification-icon">
+                    <i class="far fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="member-info-container">
+        <!-- 左侧用户信息 -->
+        <div class="user-info-card">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="images/1.png" alt="用户头像">
+                </div>
+                <h2 class="user-name">
+                    用户abc <i class="fas fa-check-circle"></i>
+                </h2>
+                <p class="user-id">m009xk23RUS <i class="fas fa-medal"></i></p>
+                <div class="user-details">
+                    <p><span>邮箱地址：</span>123456789@163.com</p>
+                    <p><span>注册场馆：</span>2929-01-01 01:21:21</p>
+                    <p><span>会员过期：</span>2025-03-23 01:21:21</p>
+                </div>
+            </div>
+
+            <!-- 用户菜单 -->
+            <div class="user-menu">
+                <a href="#" class="menu-item active">
+                    <i class="fas fa-gem"></i>
+                    <span>会员信息</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-history"></i>
+                    <span>消费记录</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>邀请注册</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>预约服务</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 右侧内容区域 -->
+        <div class="content-area">
+            <!-- 会员等级卡片 -->
+            <div class="member-card">
+                <div class="member-header">
+                    <div class="member-title">
+                        <i class="fas fa-shield-alt"></i>
+                        <h2>黄金会员</h2>
+                    </div>
+                    <div class="member-date">2022.04.23到期 已节省870元</div>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <span>3921/20000 经验值</span>
+                        <span>还差25等可升级</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 20%"></div>
+                    </div>
+                    <div class="points">2000 积分</div>
+                </div>
+            </div>
+
+            <!-- 下方深色面板 -->
+            <div class="dark-panel">
+                <!-- 这里可以添加更多内容 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 - 无分割线版本 -->
+    <footer class="footer no-border">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="CAR PRO">
+            </div>
+            <div class="contact-info">
+                <h3>Напишите нам:</h3>
+                <p><i class="fas fa-phone"></i> +7 (964) 123-45-67</p>
+                <p><i class="fas fa-comment"></i> +7 (964) 123-45-67</p>
+            </div>
+            <div class="working-hours">
+                <h3>График работы:</h3>
+                <p>Ежедневно с 09:00 до 23:00</p>
+                <p><i class="fas fa-map-marker-alt"></i> г. Владивxxxxxxxx,<br> xxxxxxxxxxxa, 49</p>
+            </div>
+        </div>
+        
+        <!-- 地图横幅 -->
+        <div class="footer-map">
+            <img src="images/2.png" alt="Map">
+          
+        </div>
+        <div class="copyright" style="display: flex; justify-content: space-between; align-items: center;">
+            <p>© 2024 carpro.</p>
+            <img src="images/22.png" alt="logo" style="width: 35px; height: 35px; cursor: pointer; background: #FF6B00; border-radius: 50%; padding: 8px;">
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // 点击导航链接时关闭菜单
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // 点击页面其他地方关闭菜单
+            document.addEventListener('click', function(event) {
+                if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,411 @@
+/* 页面整体布局 */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+}
+
+/* 登录页面样式 */
+.login-container {
+    flex: 1;
+    padding: 80px 5% 2rem;
+    background-color: #000;
+}
+
+.login-content {
+    display: flex;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #000000;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* 左侧登录表单区域 */
+.login-form-section {
+    flex: 1;
+    padding: 3rem;
+}
+
+.login-form-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.subtitle {
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+/* 表单样式 */
+.login-form {
+    max-width: 400px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background: #1A1A1A;
+    border: 1px solid #333;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: #666;
+}
+
+.send-code-btn,
+.get-code-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #FF6B00;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.send-code-btn img,
+.get-code-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* 登录按钮 */
+.login-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #FF6B00;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s;
+}
+
+.login-submit-btn:hover {
+    background: #ff8533;
+}
+
+/* 功能特点区域 */
+.features-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature {
+    color: #888;
+}
+
+.feature i {
+    color: #0088FF;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+/* 右侧图片区域 */
+.login-image-section {
+    flex: 1;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.login-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* 底部样式 */
+.footer {
+    background: #000;
+    padding: 2rem 5%;
+    color: #fff;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer-logo {
+    height: 60px;
+}
+
+.footer-logo img {
+    height: 100%;
+    width: auto;
+}
+
+.contact-info, .working-hours {
+    flex: 1;
+}
+
+.contact-info h3, .working-hours h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p, .working-hours p {
+    color: #888;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info i, .working-hours i {
+    color: #666;
+    width: 20px;
+}
+
+/* 底部地图横幅样式 */
+.footer-map {
+    margin: 2rem -5%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-color: #666;
+}
+
+.footer-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+/* 底部版权声明样式 */
+.copyright {
+    margin-top: 0;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+.copyright p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 968px) {
+    .login-content {
+        flex-direction: column;
+    }
+
+    .login-image-section {
+        height: 300px;
+    }
+
+    .features-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-form-section {
+        padding: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 2rem;
+    }
+
+    .contact-info p, .working-hours p {
+        justify-content: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .footer-map {
+        height: 200px;
+    }
+}
+
+/* 导航栏按钮样式 */
+.login-btn {
+    background: #FF6B00;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.login-btn i {
+    font-size: 0.8rem;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.message-icon, .notification-icon {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #FF6B00;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.privacy-link {
+    color: #0088FF;
+    text-decoration: none;
+}
+
+.forgot-code {
+    color: #666;
+    text-decoration: none;
+}
+
+.get-code-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FF6B00;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.get-code-btn img {
+    width: 20px;
+    height: 20px;
+    background: white;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+/* 分开发送按钮的样式 */
+.send-code-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.send-code-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* 自定义复选框样式 */
+.checkbox-container input[type="checkbox"] {
+    display: none;  /* 隐藏原始复选框 */
+}
+
+.checkbox-container .checkmark {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* 选中状态的样式 */
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+    background-color: #FF6B00;  /* 选中时填充橙色背景 */
+    border-color: #FF6B00;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid white;  /* 白色对勾 */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* 悬停效果 */
+.checkbox-container .checkmark:hover {
+    border-color: #FF6B00;
+} 

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邀请记录 - CAR PRO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/invite-record.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="CAR PRO">
+        </div>
+        <div class="nav-links">
+            <a href="#">主页</a>
+            <a href="#">关于我们</a>
+            <a href="#">我们的服务</a>
+            <a href="#">员工介绍</a>
+        </div>
+        <div class="nav-right">
+            <div class="nav-buttons">
+                <a href="#" class="message-icon">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <a href="#" class="notification-icon">
+                    <i class="far fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </a>
+                <button class="register-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    立即登录
+                </button>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="invite-record-container">
+        <div class="container-inner">
+            <!-- 左侧用户信息 -->
+            <div class="user-info-card">
+                <div class="user-avatar">
+                    <img src="images/1.png" alt="用户头像">
+                </div>
+                <h2 class="user-name">
+                    用户abc <i class="fas fa-check-circle"></i>
+                </h2>
+                <p class="user-id">m009xk23RUS <i class="fas fa-medal"></i></p>
+                <div class="user-details">
+                    <p><span>邮箱地址：</span>123456789@163.com</p>
+                    <p><span>注册场馆：</span>2929-01-01 01:21:21</p>
+                    <p><span>会员过期：</span>2025-03-23 01:21:21</p>
+                </div>
+
+                <!-- 用户菜单 -->
+                <div class="user-menu">
+                    <a href="#" class="menu-item">
+                        <i class="fas fa-gem"></i>
+                        <span>会员信息</span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <i class="fas fa-history"></i>
+                        <span>消费记录</span>
+                    </a>
+                    <a href="#" class="menu-item active">
+                        <i class="fas fa-envelope"></i>
+                        <span>邀请注册</span>
+                    </a>
+                    <a href="#" class="menu-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>预约服务</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 右侧内容区域 -->
+            <div class="content-area">
+                <!-- 邀请统计卡片 -->
+                <div class="invite-stats-card">
+                    <h2>Когда вы приглашаете друга зарегистрироваться</h2>
+                    <h3>Вы получите скидку 20% на депозит другой стороны</h3>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value">45</span>
+                            <span class="stat-label">Званый</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">120</span>
+                            <span class="stat-label">Количество рибейтов</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">20000</span>
+                            <span class="stat-label">Скидки</span>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="action-btn">Скопируйте скидку-приглашение</button>
+                        <button class="action-btn">Скопируйте код приглашения</button>
+                        <button class="action-btn">Выплаты</button>
+                    </div>
+                </div>
+
+                <!-- 邀请记录表格 -->
+                <div class="invite-records">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Дата</th>
+                                <th>Потраченная сумма</th>
+                                <th>Товар</th>
+                                <th>Баллы</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AAAAAA</td>
+                                <td>BBBBBBB</td>
+                                <td>CCCCCCCC</td>
+                                <td>DDDDDDDD</td>
+                                <td>EEEEEEEEEE</td>
+                                <td><button class="detail-btn">+</button></td>
+                            </tr>
+                            <!-- 重复的记录行 -->
+                        </tbody>
+                    </table>
+
+                    <!-- 分页 -->
+                    <div class="pagination">
+                        <button class="page-btn"><i class="fas fa-angle-double-left"></i></button>
+                        <button class="page-btn"><i class="fas fa-angle-left"></i></button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">4</button>
+                        <button class="page-btn">5</button>
+                        <button class="page-btn"><i class="fas fa-angle-right"></i></button>
+                        <button class="page-btn"><i class="fas fa-angle-double-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 - 无分割线版本 -->
+    <footer class="footer no-border">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="CAR PRO">
+            </div>
+            <div class="contact-info">
+                <h3>Напишите нам:</h3>
+                <p><i class="fas fa-phone"></i> +7 (964) 123-45-67</p>
+                <p><i class="fas fa-comment"></i> +7 (964) 123-45-67</p>
+            </div>
+            <div class="working-hours">
+                <h3>График работы:</h3>
+                <p>Ежедневно с 09:00 до 23:00</p>
+                <p><i class="fas fa-map-marker-alt"></i> г. Владивxxxxxxxx,<br> xxxxxxxxxxxa, 49</p>
+            </div>
+        </div>
+        
+       <!-- 地图横幅 -->
+       <div class="footer-map">
+        <img src="images/2.png" alt="Map">
+       
+    </div>
+        
+         <!-- 版权声明 -->
+         <div class="copyright" style="display: flex; justify-content: space-between; align-items: center;">
+            <p>© 2024 carpro.</p>
+            <img src="images/22.png" alt="logo" style="width: 35px; height: 35px; cursor: pointer; background: #FF6B00; border-radius: 50%; padding: 8px;">
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // 点击导航链接时关闭菜单
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // 点击页面其他地方关闭菜单
+            document.addEventListener('click', function(event) {
+                if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
