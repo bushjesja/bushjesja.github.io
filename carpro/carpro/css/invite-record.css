@@ -1,0 +1,285 @@
+/* 页面整体布局 */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+}
+
+/* 邀请记录页面样式 */
+.invite-record-container {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 80px 0 2rem;
+    background-color: #000;
+}
+
+.container-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* 左侧用户信息卡片样式 */
+.user-info-card {
+    width: 423px;
+    background: rgba(41, 41, 41, 1);
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+/* 用户信息样式 */
+.user-avatar {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1.5rem;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
+}
+
+.user-id {
+    color: #888;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.user-details {
+    font-size: 0.85rem;
+}
+
+.user-details p {
+    margin: 0.2rem 0;
+    color: #CCC;
+}
+
+.user-details span {
+    color: #888;
+    margin-right: 0.3rem;
+}
+
+/* 用户菜单样式 */
+.user-menu {
+    margin-top: 2rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu-item i {
+    font-size: 1.2rem;
+}
+
+.menu-item:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.menu-item.active {
+    color: #fff;
+    background: #000;
+    border-radius: 8px;
+}
+
+/* 右侧内容区域样式 */
+.content-area {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* 邀请统计卡片样式 */
+.invite-stats-card {
+    background: #2A2A2A;
+    border-radius: 15px;
+    padding: 2rem;
+    color: #fff;
+}
+
+.invite-stats-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.invite-stats-card h3 {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 0.8rem;
+    background: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background: #333;
+}
+
+/* 邀请记录表格样式 */
+.invite-records {
+    background: #2A2A2A;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+
+th {
+    color: #888;
+    font-weight: normal;
+}
+
+.detail-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FF6B00;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 分页样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-btn.active {
+    background: #FF6B00;
+}
+
+.page-btn:hover {
+    background: #333;
+}
+
+/* 覆盖底部分割线样式 */
+.footer .copyright.no-border {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 1600px) {
+    .container-inner {
+        padding: 2rem;
+    }
+
+    .user-info-card {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 423px;
+        margin: 0 auto 2rem;
+    }
+
+    .content-area {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 938px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .invite-record-container {
+        padding: 2rem;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+} 

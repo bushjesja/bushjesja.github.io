@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - CAR PRO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="CAR PRO">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">主页</a>
+            <a href="booking.html">关于我们</a>
+            <a href="booking.html">我们的服务</a>
+            <a href="index.html">员工介绍</a>
+        </div>
+        <div class="nav-right">
+            <div class="nav-buttons">
+                <button class="register-btn">立即登录 <i class="fas fa-arrow-right"></i></button>
+                <a href="#" class="message-icon"><i class="far fa-envelope"></i></a>
+                <a href="#" class="notification-icon">
+                    <i class="far fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-content">
+            <!-- 左侧登录表单 -->
+            <div class="login-form-section">
+                <h1>登录</h1>
+                <p class="subtitle">这里简单介绍一下自己的号之类的，反正就是字数多一点，写的满一点。</p>
+                
+                <form class="login-form">
+                    <div class="input-group">
+                        <input type="tel" placeholder="电话" required>
+                        <button type="button" class="send-code-btn">
+                            <img src="images/4.png" alt="电话">
+                        </button>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="text" placeholder="验证码" required>
+                        <button type="button" class="get-code-btn">获取验证码 <img src="images/5.png" alt="验证码"></button>
+                    </div>
+
+                    <div class="form-footer">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            无账户则自动注册并同意
+                            <a href="#" class="privacy-link">电户协议</a>
+                        </label>
+                        <a href="#" class="privacy-link">忘记验证码</a>
+                    </div>
+
+                    <button type="submit" class="login-submit-btn">立即登录</button>
+                </form>
+
+                <!-- 底部功能区 -->
+                <div class="features-section">
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <h3>优点举例</h3>
+                        <p>随便选择一点东西正在就绪等待增加内容，随便选择一点东西正在就绪等待增加内容</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>服务技能</h3>
+                        <p>随便选择一点东西正在就绪等待增加内容，随便选择一点东西正在就绪等待增加内容</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧图片展示 -->
+            <div class="login-image-section">
+                <img src="images/3.png" alt="豪华汽车">
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="CAR PRO">
+            </div>
+            <div class="contact-info">
+                <h3>Напишите нам:</h3>
+                <p><i class="fas fa-phone"></i> +7 (964) 123-45-67</p>
+                <p><i class="fas fa-comment"></i> +7 (964) 123-45-67</p>
+            </div>
+            <div class="working-hours">
+                <h3>График работы:</h3>
+                <p>Ежедневно с 09:00 до 23:00</p>
+                <p><i class="fas fa-map-marker-alt"></i> г. Владивxxxxxxxx,<br> xxxxxxxxxxxa, 49</p>
+            </div>
+        </div>
+        
+        <!-- 地图横幅 -->
+        <div class="footer-map">
+            <img src="images/2.png" alt="Map">
+        </div>
+        
+        <!-- 版权声明 -->
+        <div class="copyright" style="display: flex; justify-content: space-between; align-items: center;">
+            <p>© 2024 carpro.</p>
+            <img src="images/22.png" alt="logo" style="width: 35px; height: 35px; cursor: pointer; background: #FF6B00; border-radius: 50%; padding: 8px;">
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // 点击导航链接时关闭菜单
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // 点击页面其他地方关闭菜单
+            document.addEventListener('click', function(event) {
+                if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
