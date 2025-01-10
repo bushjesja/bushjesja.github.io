@@ -6,29 +6,28 @@
     <title>CAR PRO - Профессиональный уход за автомобилем</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
+     <!-- 导航栏 -->
+     <nav class="navbar">
         <div class="logo">
             <img src="images/logo.png" alt="CAR PRO">
         </div>
         <div class="nav-links">
-            <a href="#" class="active">主页</a>
-            <a href="booking.html">联系我们</a>
-            <a href="index.html">服务的内容</a>
+            <a href="index.html">主页</a>
+            <a href="booking.html">关于我们</a>
+            <a href="booking.html">我们的服务</a>
             <a href="index.html">员工介绍</a>
         </div>
-        <div class="right-buttons">
-        <div class="nav-buttons">
-                <a href="login.html" class="login-btn">立即登录<i class="fas fa-arrow-right"></i></a>
-                <a href="#" class="message-icon">
-                    <i class="far fa-envelope"></i>
-                </a>
+        <div class="nav-right">
+            <div class="nav-buttons">
+                <button class="register-btn" style="color: #000000; background: #ffffff; padding: 12px 24px; border: none; border-radius: 99px; cursor: pointer; display: flex; align-items: center; gap: 8px;">立即登录 <i class="fas fa-arrow-right"></i></button>
+                <a href="#" class="message-icon"><i class="far fa-envelope"></i></a>
                 <a href="#" class="notification-icon">
-                    <i class="far fa-bell"></i>
-                    <span class="notification-badge">5</span>
+                    <i class="far fa-bell" style="color: #ffffff;"></i>
+                    <span class="notification-badge" style="background: #2B6BF3;">5</span>
                 </a>
             </div>
             <div class="hamburger-menu">
@@ -80,11 +79,11 @@
         <h2 style="font-size: 49px; color: #FFF9F8; margin-bottom: 20px; position: relative;  top: 100px;">服务内容</h2>
         
         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px;">
-            <div>
-                <h2 style="font-size: 49px; color: #FFF9F8; margin-bottom: 20px; font-weight: normal;">服务内容</h2>
-                <p style="color: rgba(255, 255, 255, 0.6); font-size: 16px; max-width: 600px;">我们有众多服务来满足您的需求。我们是车辆专家，也是各个领域的多面手！</p>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <h2 style="font-size: 49px; color: #FFF9F8; margin-bottom: 10px; font-weight: normal;">服务内容</h2>
+                <p class="service-description" style="color: rgba(255, 255, 255, 0.6); font-size: 10px; max-width: 600px;">我们有众多服务来满足您的需求。我们是车辆专家，也是各个领域的多面手！</p>
             </div>
-            <a href="#" style="display: inline-flex; align-items: center; gap: 10px; background: #2B6BF3; color: #fff; text-decoration: none; padding: 16px 32px; border-radius: 80px; font-size: 16px; margin-top: 10px;">
+            <a href="#" style="display: inline-flex; align-items: center; gap: 10px; background: #2B6BF3; color: #fff; text-decoration: none; padding: 16px 32px; border-radius: 80px; font-size: 16px; margin-top: 40px;">
                 点击此处，立即预约！
                 <div style="width: 32px; height: 32px; background: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                     <img src="images/18.png" alt="arrow" style="width: 16px; height: 16px;">
@@ -121,7 +120,7 @@
             </div>
 
             <!-- 右侧内容 -->
-            <div style="flex: 1;">
+            <div class="service-content" style="flex: 1;">
                 <p style="font-size: 14px; color: rgba(255, 255, 255, 0.6); margin-bottom: 20px;">小标题小标题小标题小标题</p>
                 <h2 style="font-size: 49px; color: #FFF9F8; margin-bottom: 20px;">大标题大标题大标题大标题</h2>
                 <p style="font-size: 16px; color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 30px;">炫酷的介绍炫酷的介绍炫酷的介绍炫酷的介绍炫酷的介绍炫酷的介绍炫酷的介绍炫酷的介绍炫酷的介绍炫酷的介绍</p>
@@ -142,13 +141,30 @@
                 </div>
             </div>
         </div>
+        <style>
+            @media screen and (max-width: 768px) {
+                div[style*="display: flex; gap: 40px;"] {
+                    flex-direction: column;
+                }
+                div[style*="display: flex; gap: 40px;"] > div {
+                    flex: none;
+                    width: 100%;
+                }
+                .service-carousel {
+                    width: 100% !important;
+                }
+                .service-content {
+                    margin-top: 20px;
+                }
+            }
+        </style>
 
         <!-- 新增服务内容 -->
         <div style="margin-top: 60px;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px;">
-                <div>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
                     <h2 style="font-size: 49px; color: #FFF9F8; margin-bottom: 10px; font-weight: normal;">服务内容</h2>
-                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 10px; max-width: 600px;position: relative;left: 400px;">我们有众多服务来满足您的需求。我们是车辆专家，也是各个领域的多面手！</p>
+                    <p class="service-description" style="color: rgba(255, 255, 255, 0.6); font-size: 10px; max-width: 600px;">我们有众多服务来满足您的需求。我们是车辆专家，也是各个领域的多面手！</p>
                 </div>
                 <a href="#" style="display: inline-flex; align-items: center; gap: 10px; background: #2B6BF3; color: #fff; text-decoration: none; padding: 16px 32px; border-radius: 80px; font-size: 16px; margin-top: 40px;">
                     点击此处，立即预约！
@@ -158,87 +174,211 @@
                 </a>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-                <!-- 服务卡片 1 -->
-                <div style="border-radius: 20px; background: #000; overflow: hidden;">
-                    <div style="position: relative;">
-                        <img src="images/10.png" alt="汽车美容服务中心" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px;">
-                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px;">
-                            <img src="images/14.png" alt="icon" style="width: 20px; height: 20px;">
-                            <span style="color: #000;">汽车美容服务中心</span>
-                        </div>
-                    </div>
-                    <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
-                        <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 20px; padding-right: 20px;">
-                            <span style="color: #fff; font-size: 16px; padding: 12px 0;">最低会员价/次</span>
-                            <span style="color: #fff; font-size: 24px; margin-left: 10px; background: #FF6B00; padding: 12px 20px; border-radius: 0 100px 100px 0; margin-right: -20px;">$550</span>
-                        </div>
-                        <div style="width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                            <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg);"></i>
-                        </div>
-                    </div>
-                </div>
+            <!-- 添加样式 -->
+            <style>
+                @media screen and (min-width: 769px) {
+                    .service-description {
+                        position: relative;
+                        left: 400px;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    .service-description {
+                        position: static;
+                    }
+                }
+            </style>
 
-                <!-- 服务卡片 2 -->
-                <div style="border-radius: 20px; background: #000; overflow: hidden;">
-                    <div style="position: relative;">
-                        <img src="images/11.png" alt="汽车维修服务中心" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px;">
-                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px;">
-                            <img src="images/14.png" alt="icon" style="width: 20px; height: 20px;">
-                            <span style="color: #000;">汽车维修服务中心</span>
+            <!-- PC端显示 -->
+            <div class="pc-services" style="display: none;">
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px;">
+                    <!-- 服务卡片 1 -->
+                    <div style="border-radius: 20px; background: #000; overflow: hidden;">
+                        <div style="position: relative;">
+                            <img src="images/10.png" alt="汽车美容服务中心" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px;">
+                            <div style="position: absolute; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px;">
+                                <img src="images/14.png" alt="icon" style="width: 20px; height: 20px;">
+                                <span style="color: #000;">汽车美容服务中心</span>
+                            </div>
+                        </div>
+                        <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 20px; padding-right: 20px;">
+                                <span style="color: #fff; font-size: 16px; padding: 12px 0;">最低会员价/次</span>
+                                <span style="color: #fff; font-size: 24px; margin-left: 10px; background: #FF6B00; padding: 12px 20px; border-radius: 0 100px 100px 0; margin-right: -20px;">$550</span>
+                            </div>
+                            <div style="width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg);"></i>
+                            </div>
                         </div>
                     </div>
-                    <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
-                        <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 20px; padding-right: 20px;">
-                            <span style="color: #fff; font-size: 16px; padding: 12px 0;">最低会员价/次</span>
-                            <span style="color: #fff; font-size: 24px; margin-left: 10px; background: #FF6B00; padding: 12px 20px; border-radius: 0 100px 100px 0; margin-right: -20px;">$550</span>
-                        </div>
-                        <div style="width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                            <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg);"></i>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- 服务卡片 3 -->
-                <div style="border-radius: 20px; background: #000; overflow: hidden;">
-                    <div style="position: relative;">
-                        <img src="images/12.png" alt="汽车保养服务中心" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px;">
-                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px;">
-                            <img src="images/14.png" alt="icon" style="width: 20px; height: 20px;">
-                            <span style="color: #000;">汽车保养服务中心</span>
+                    <!-- 服务卡片 2 -->
+                    <div style="border-radius: 20px; background: #000; overflow: hidden;">
+                        <div style="position: relative;">
+                            <img src="images/11.png" alt="汽车维修服务中心" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px;">
+                            <div style="position: absolute; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px;">
+                                <img src="images/14.png" alt="icon" style="width: 20px; height: 20px;">
+                                <span style="color: #000;">汽车维修服务中心</span>
+                            </div>
+                        </div>
+                        <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 20px; padding-right: 20px;">
+                                <span style="color: #fff; font-size: 16px; padding: 12px 0;">最低会员价/次</span>
+                                <span style="color: #fff; font-size: 24px; margin-left: 10px; background: #FF6B00; padding: 12px 20px; border-radius: 0 100px 100px 0; margin-right: -20px;">$550</span>
+                            </div>
+                            <div style="width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg);"></i>
+                            </div>
                         </div>
                     </div>
-                    <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
-                        <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 20px; padding-right: 20px;">
-                            <span style="color: #fff; font-size: 16px; padding: 12px 0;">最低会员价/次</span>
-                            <span style="color: #fff; font-size: 24px; margin-left: 10px; background: #FF6B00; padding: 12px 20px; border-radius: 0 100px 100px 0; margin-right: -20px;">$550</span>
-                        </div>
-                        <div style="width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                            <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg);"></i>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- 服务卡片 4 -->
-                <div style="border-radius: 20px; background: #000; overflow: hidden;">
-                    <div style="position: relative;">
-                        <img src="images/13.png" alt="汽车改装服务中心" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px;">
-                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px;">
-                            <img src="images/14.png" alt="icon" style="width: 20px; height: 20px;">
-                            <span style="color: #000;">汽车改装服务中心</span>
+                    <!-- 服务卡片 3 -->
+                    <div style="border-radius: 20px; background: #000; overflow: hidden;">
+                        <div style="position: relative;">
+                            <img src="images/12.png" alt="汽车保养服务中心" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px;">
+                            <div style="position: absolute; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px;">
+                                <img src="images/14.png" alt="icon" style="width: 20px; height: 20px;">
+                                <span style="color: #000;">汽车保养服务中心</span>
+                            </div>
+                        </div>
+                        <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 20px; padding-right: 20px;">
+                                <span style="color: #fff; font-size: 16px; padding: 12px 0;">最低会员价/次</span>
+                                <span style="color: #fff; font-size: 24px; margin-left: 10px; background: #FF6B00; padding: 12px 20px; border-radius: 0 100px 100px 0; margin-right: -20px;">$550</span>
+                            </div>
+                            <div style="width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg);"></i>
+                            </div>
                         </div>
                     </div>
-                    <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
-                        <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 20px; padding-right: 20px;">
-                            <span style="color: #fff; font-size: 16px; padding: 12px 0;">最低会员价/次</span>
-                            <span style="color: #fff; font-size: 24px; margin-left: 10px; background: #FF6B00; padding: 12px 20px; border-radius: 0 100px 100px 0; margin-right: -20px;">$550</span>
+
+                    <!-- 服务卡片 4 -->
+                    <div style="border-radius: 20px; background: #000; overflow: hidden;">
+                        <div style="position: relative;">
+                            <img src="images/13.png" alt="汽车改装服务中心" style="width: 100%; height: 350px; object-fit: cover; border-radius: 20px;">
+                            <div style="position: absolute; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.9); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px;">
+                                <img src="images/14.png" alt="icon" style="width: 20px; height: 20px;">
+                                <span style="color: #000;">汽车改装服务中心</span>
+                            </div>
                         </div>
-                        <div style="width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                            <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg);"></i>
+                        <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 20px; padding-right: 20px;">
+                                <span style="color: #fff; font-size: 16px; padding: 12px 0;">最低会员价/次</span>
+                                <span style="color: #fff; font-size: 24px; margin-left: 10px; background: #FF6B00; padding: 12px 20px; border-radius: 0 100px 100px 0; margin-right: -20px;">$550</span>
+                            </div>
+                            <div style="width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg);"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 移动端显示 -->
+            <div class="mobile-services" style="display: none;">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px;">
+                    <!-- 服务卡片 1 -->
+                    <div style="border-radius: 20px; background: #000; overflow: hidden;">
+                        <div style="position: relative;">
+                            <img src="images/10.png" alt="汽车美容服务中心" style="width: 100%; height: 200px; object-fit: cover; border-radius: 20px;">
+                            <div style="position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.9); padding: 6px 12px; border-radius: 20px; display: flex; align-items: center; gap: 4px;">
+                                <img src="images/14.png" alt="icon" style="width: 16px; height: 16px;">
+                                <span style="color: #000; font-size: 12px;">汽车美容服务中心</span>
+                            </div>
+                        </div>
+                        <div style="padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 10px; padding-right: 10px;">
+                                <span style="color: #fff; font-size: 12px; padding: 8px 0;">最低会员价/次</span>
+                                <span style="color: #fff; font-size: 16px; margin-left: 5px; background: #FF6B00; padding: 8px 12px; border-radius: 0 100px 100px 0; margin-right: -10px;">$550</span>
+                            </div>
+                            <div style="width: 28px; height: 28px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg); font-size: 12px;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 服务卡片 2 -->
+                    <div style="border-radius: 20px; background: #000; overflow: hidden;">
+                        <div style="position: relative;">
+                            <img src="images/11.png" alt="汽车维修服务中心" style="width: 100%; height: 200px; object-fit: cover; border-radius: 20px;">
+                            <div style="position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.9); padding: 6px 12px; border-radius: 20px; display: flex; align-items: center; gap: 4px;">
+                                <img src="images/14.png" alt="icon" style="width: 16px; height: 16px;">
+                                <span style="color: #000; font-size: 12px;">汽车维修服务中心</span>
+                            </div>
+                        </div>
+                        <div style="padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 10px; padding-right: 10px;">
+                                <span style="color: #fff; font-size: 12px; padding: 8px 0;">最低会员价/次</span>
+                                <span style="color: #fff; font-size: 16px; margin-left: 5px; background: #FF6B00; padding: 8px 12px; border-radius: 0 100px 100px 0; margin-right: -10px;">$550</span>
+                            </div>
+                            <div style="width: 28px; height: 28px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg); font-size: 12px;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 服务卡片 3 -->
+                    <div style="border-radius: 20px; background: #000; overflow: hidden;">
+                        <div style="position: relative;">
+                            <img src="images/12.png" alt="汽车保养服务中心" style="width: 100%; height: 200px; object-fit: cover; border-radius: 20px;">
+                            <div style="position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.9); padding: 6px 12px; border-radius: 20px; display: flex; align-items: center; gap: 4px;">
+                                <img src="images/14.png" alt="icon" style="width: 16px; height: 16px;">
+                                <span style="color: #000; font-size: 12px;">汽车保养服务中心</span>
+                            </div>
+                        </div>
+                        <div style="padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 10px; padding-right: 10px;">
+                                <span style="color: #fff; font-size: 12px; padding: 8px 0;">最低会员价/次</span>
+                                <span style="color: #fff; font-size: 16px; margin-left: 5px; background: #FF6B00; padding: 8px 12px; border-radius: 0 100px 100px 0; margin-right: -10px;">$550</span>
+                            </div>
+                            <div style="width: 28px; height: 28px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg); font-size: 12px;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 服务卡片 4 -->
+                    <div style="border-radius: 20px; background: #000; overflow: hidden;">
+                        <div style="position: relative;">
+                            <img src="images/13.png" alt="汽车改装服务中心" style="width: 100%; height: 200px; object-fit: cover; border-radius: 20px;">
+                            <div style="position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.9); padding: 6px 12px; border-radius: 20px; display: flex; align-items: center; gap: 4px;">
+                                <img src="images/14.png" alt="icon" style="width: 16px; height: 16px;">
+                                <span style="color: #000; font-size: 12px;">汽车改装服务中心</span>
+                            </div>
+                        </div>
+                        <div style="padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center; background: rgba(0, 0, 0, 1); border: 1px solid #FF6B00; border-radius: 100px; padding-left: 10px; padding-right: 10px;">
+                                <span style="color: #fff; font-size: 12px; padding: 8px 0;">最低会员价/次</span>
+                                <span style="color: #fff; font-size: 16px; margin-left: 5px; background: #FF6B00; padding: 8px 12px; border-radius: 0 100px 100px 0; margin-right: -10px;">$550</span>
+                            </div>
+                            <div style="width: 28px; height: 28px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                <i class="fas fa-arrow-right" style="color: #000; transform: rotate(-45deg); font-size: 12px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 控制显示的样式 -->
+            <style>
+                @media screen and (min-width: 769px) {
+                    .pc-services {
+                        display: block !important;
+                    }
+                    .mobile-services {
+                        display: none !important;
+                    }
+                }
+                
+                @media screen and (max-width: 768px) {
+                    .pc-services {
+                        display: none !important;
+                    }
+                    .mobile-services {
+                        display: block !important;
+                    }
+                }
+            </style>
         </div>
     </section>
 

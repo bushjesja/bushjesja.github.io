@@ -86,7 +86,7 @@ body {
 
 .user-details span {
     color: #888;
-    margin-right: 0.5rem;
+    margin-right: 4rem;
 }
 
 /* 用户菜单样式 */
@@ -104,13 +104,18 @@ body {
     padding: 1rem;
     background: #1A1A1A;
     border-radius: 8px;
-    color: #0088FF;
+    color: #888;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 .menu-item:hover {
     background: #222;
+    color: #0088FF;
+}
+
+.menu-item:active {
+    color: #0088FF;
 }
 
 .menu-item i {

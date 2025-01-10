@@ -40,6 +40,9 @@ body {
 .nav-links {
     display: flex;
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 .nav-links a {

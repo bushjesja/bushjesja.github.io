@@ -355,4 +355,17 @@ body {
         gap: 15px;
         margin-left: auto;
     }
+}
+
+.nav-logo img {
+    height: 24px;
+    width: auto;
+}
+
+.notification-badge {
+    min-width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
