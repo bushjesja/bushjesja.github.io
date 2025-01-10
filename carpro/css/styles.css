@@ -94,20 +94,19 @@ body {
 /* 移动端导航栏样式 */
 @media (max-width: 768px) {
     .navbar {
-        padding: 1rem 20px;
+        padding: 1rem 15px;
     }
 
     .nav-right {
         display: flex;
         align-items: center;
-        gap: 15px;
-        margin-left: auto;
+        gap: 10px;
     }
 
     .nav-buttons {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
     }
 
     .nav-links {
@@ -143,7 +142,7 @@ body {
         height: 20px;
         cursor: pointer;
         z-index: 999;
-        margin-left: 15px;
+        margin-left: 10px;
     }
 
     .hamburger-menu span {
