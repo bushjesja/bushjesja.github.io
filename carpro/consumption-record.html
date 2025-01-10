@@ -28,7 +28,11 @@
                     <i class="far fa-bell"></i>
                     <span class="notification-badge">5</span>
                 </a>
-                <button class="register-btn">立即登录 <i class="fas fa-arrow-right"></i></button>
+                <a href="login.html" style="text-decoration: none;">
+                    <button class="register-btn">
+                        立即登录 <i class="fas fa-arrow-right"></i>
+                    </button>
+                </a>
             </div>
             <div class="hamburger-menu">
                 <span></span>
@@ -227,6 +231,54 @@
                 }
             });
         });
+
+        function applyMobileStyles() {
+            const table = document.querySelector('.consumption-table');
+            const recordPanel = document.querySelector('.record-panel');
+            
+            if (window.innerWidth <= 768) {
+                // 移动端样式
+                recordPanel.style.cssText = `
+                    padding: 10px;
+                    overflow-x: auto;
+                    position: relative;
+                    -webkit-overflow-scrolling: touch;
+                `;
+                
+                table.style.cssText = `
+                    min-width: 750px;
+                    width: 100%;
+                    border-collapse: collapse;
+                `;
+
+                // 添加滑动提示
+                if (!document.querySelector('.scroll-hint')) {
+                    const hint = document.createElement('div');
+                    hint.className = 'scroll-hint';
+                    hint.style.cssText = `
+                        position: absolute;
+                        bottom: -25px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-size: 14px;
+                        color: #666;
+                        white-space: nowrap;
+                    `;
+                    hint.textContent = '← 滑动查看更多 →';
+                    recordPanel.appendChild(hint);
+                }
+            } else {
+                // PC端移除行内样式
+                recordPanel.removeAttribute('style');
+                table.removeAttribute('style');
+                const hint = document.querySelector('.scroll-hint');
+                if (hint) hint.remove();
+            }
+        }
+
+        // 初始化和窗口调整时应用样式
+        window.addEventListener('load', applyMobileStyles);
+        window.addEventListener('resize', applyMobileStyles);
     </script>
 </body>
 </html> 
