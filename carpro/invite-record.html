@@ -23,7 +23,9 @@
         </div>
         <div class="nav-right">
             <div class="nav-buttons">
-                <button class="logout-btn">立刻登录 <i class="fas fa-arrow-right"></i></button>
+                <a href="login.html" style="text-decoration: none;">
+                    <button class="logout-btn"> 立刻登录 <i class="fas fa-arrow-right"></i></button>
+                </a>
                 <a href="#" class="message-icon"><i class="far fa-envelope"></i></a>
                 <a href="#" class="notification-icon">
                     <i class="far fa-bell"></i>
@@ -103,13 +105,69 @@
                             <span class="stat-label">Скидки</span>
                         </div>
                     </div>
+<!-- 添加按钮组件 -->
+<div class="action-buttons">
+    <button class="action-btn">Скопируйте скидку-приглашение</button>
+    <button class="action-btn">Скопируйте код приглашения</button>
+    <button class="action-btn">Выплаты</button>
+</div>
 
-                    <div class="action-buttons">
-                        <button class="action-btn">Скопируйте скидку-приглашение</button>
-                        <button class="action-btn">Скопируйте код приглашения</button>
-                        <button class="action-btn">Выплаты</button>
-                    </div>
-                </div>
+<!-- 添加响应式样式 -->
+<style>
+    .action-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        margin: 20px 0;
+        padding: 0 15px;
+    }
+
+    .action-btn {
+        flex: 1;
+        padding: 12px 20px;
+        background: #1a1a1a;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    /* 移动端适配 */
+    @media screen and (max-width: 768px) {
+        .action-buttons {
+            flex-direction: column;
+            padding: 0 20px;
+        }
+
+        .action-btn {
+            width: 100%;
+            font-size: 16px;
+            padding: 15px;
+            margin-bottom: 10px;
+            white-space: normal; /* 允许文字换行 */
+            height: auto;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    /* 小屏幕适配 */
+    @media screen and (max-width: 480px) {
+        .action-buttons {
+            padding: 0 15px;
+        }
+
+        .action-btn {
+            font-size: 14px;
+            padding: 12px;
+        }
+    }
+</style>
 
                 <!-- 邀请记录表格 -->
                 <div class="invite-records">
@@ -133,6 +191,46 @@
                                 <td><button class="detail-btn">+</button></td>
                             </tr>
                             <!-- 重复的记录行 -->
+                            <tr>
+                                <td>AAAAAA</td>
+                                <td>BBBBBBB</td>
+                                <td>CCCCCCCC</td>
+                                <td>DDDDDDDD</td>
+                                <td>EEEEEEEEEE</td>
+                                <td><button class="detail-btn">+</button></td>
+                            </tr>
+                            <tr>
+                                <td>AAAAAA</td>
+                                <td>BBBBBBB</td>
+                                <td>CCCCCCCC</td>
+                                <td>DDDDDDDD</td>
+                                <td>EEEEEEEEEE</td>
+                                <td><button class="detail-btn">+</button></td>
+                            </tr>
+                            <tr>
+                                <td>AAAAAA</td>
+                                <td>BBBBBBB</td>
+                                <td>CCCCCCCC</td>
+                                <td>DDDDDDDD</td>
+                                <td>EEEEEEEEEE</td>
+                                <td><button class="detail-btn">+</button></td>
+                            </tr>
+                            <tr>
+                                <td>AAAAAA</td>
+                                <td>BBBBBBB</td>
+                                <td>CCCCCCCC</td>
+                                <td>DDDDDDDD</td>
+                                <td>EEEEEEEEEE</td>
+                                <td><button class="detail-btn">+</button></td>
+                            </tr>
+                            <tr>
+                                <td>AAAAAA</td>
+                                <td>BBBBBBB</td>
+                                <td>CCCCCCCC</td>
+                                <td>DDDDDDDD</td>
+                                <td>EEEEEEEEEE</td>
+                                <td><button class="detail-btn">+</button></td>
+                            </tr>
                         </tbody>
                     </table>
 
