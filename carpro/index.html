@@ -470,7 +470,18 @@
         <img src="images/20.png" alt="快速预约服务" style="width: 100%; height: auto;">
     </section>
 
-
+    <style>
+    @media screen and (max-width: 768px) {
+        .banner-section {
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+        .banner-section img {
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+    </style>
 
     <!-- 底部联系信息 -->
     <footer class="footer" style="background: #000; padding: 0; margin-top: auto;">
@@ -518,5 +529,31 @@
     <!-- 返回顶部按钮 -->
     
     <script src="js/main.js"></script>
+    <style>
+    @media screen and (max-width: 768px) {
+        .nav-right {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .register-btn {
+            display: none !important;
+        }
+        .message-icon, .notification-icon {
+            color: #fff;
+        }
+        .hamburger-menu {
+            margin-left: 15px;
+        }
+    }
+    </style>
 </body>
 </html> 
