@@ -23,7 +23,9 @@
         </div>
         <div class="nav-right">
             <div class="nav-buttons">
-                <button class="register-btn">立即登录 <i class="fas fa-arrow-right"></i></button>
+                <a href="login.html" style="text-decoration: none;">
+                    <button class="register-btn"> 立即登录 <i class="fas fa-arrow-right"></i></button>
+                </a>
                 <a href="#" class="message-icon"><i class="far fa-envelope"></i></a>
                 <a href="#" class="notification-icon">
                     <i class="far fa-bell"></i>
@@ -83,36 +85,36 @@
         </div>
 
 
-        <!-- 右侧内容区域 -->
-        <div class="content-area">
-            <!-- 会员等级卡片 -->
-            <div class="member-card">
-                <div class="member-header">
-                    <div class="member-title">
-                        <i class="fas fa-shield-alt"></i>
-                        <h2>黄金会员</h2>
-                    </div>
-                    <div class="member-date">2022.04.23到期 已节省870元</div>
+        <!-- 会员等级卡片 -->
+        <div class="member-card" style="position: absolute; left: 457px; top: 100px; width: 600px; height: 300px; background: linear-gradient(148.48deg, rgba(254, 228, 182, 1) 0%, rgba(253, 205, 121, 1) 59.21%, rgba(248, 212, 140, 1) 100%); border-radius: 30px; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 1); box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);">
+            <div class="member-header">
+                <div class="member-title">
+                    <i class="fas fa-shield-alt"></i>
+                    <h2>黄金会员</h2>
                 </div>
-
-                <div class="progress-section">
-                    <div class="progress-info">
-                        <span>3921/20000 经验值</span>
-                        <span>还差25等可升级</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 20%"></div>
-                    </div>
-                    <div class="points">2000 积分</div>
-                </div>
+                <div class="member-date">2022.04.23到期 已节省870元</div>
             </div>
 
-            <!-- 下方深色面板 -->
-            <div class="dark-panel">
-                <!-- 这里可以添加更多内容 -->
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span>3921/20000 经验值</span>
+                    <span>还差25等可升级</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 20%"></div>
+                </div>
+                <div class="points">2000 积分</div>
             </div>
         </div>
     </div>
+    <!-- 会员等级卡片 -->
+        <div class="member-card" style="position: absolute; left: 457px; top: 450px; width: 600px; height: 300px; background: rgba(41, 41, 41, 1);; border-radius: 30px; padding: 1.5rem; border: 1px solid rgba(0, 0, 0, 1); box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);">
+            <div class="member-header">
+                
+            </div>
+        </div>
+
+       
 
     <!-- 底部 - 无分割线版本 -->
     <footer class="footer no-border">
@@ -139,7 +141,7 @@
         </div>
         <div class="copyright" style="display: flex; justify-content: space-between; align-items: center;">
             <p>© 2024 carpro.</p>
-            <img src="images/22.png" alt="logo" style="width: 35px; height: 35px; cursor: pointer; background: #FF6B00; border-radius: 50%; padding: 8px;">
+            <img src="images/22.png" alt="返回顶部" id="backToTop" style="width: 35px; height: 35px; cursor: pointer; background: #FF6B00; border-radius: 50%; padding: 8px; transition: opacity 0.3s;">
         </div>
     </footer>
     <script>
@@ -168,6 +170,87 @@
                 }
             });
         });
+
+        // 获取返回顶部按钮
+        const backToTop = document.getElementById('backToTop');
+
+        // 点击返回顶部
+        backToTop.addEventListener('click', function() {
+            // 使用平滑滚动效果
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 控制按钮显示隐藏
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTop.style.opacity = '1';
+            } else {
+                backToTop.style.opacity = '0';
+            }
+        });
+
+        // 初始状态隐藏按钮
+        backToTop.style.opacity = '0';
     </script>
+    <style>
+    @media screen and (max-width: 768px) {
+        .user-center-container {
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .user-card {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .member-card {
+            position: static !important;
+            width: 100% !important;
+            left: 0 !important;
+            margin: 20px 0 !important;
+            height: auto !important;
+        }
+
+        .member-header {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .member-title {
+            font-size: 20px;
+        }
+
+        .member-date {
+            font-size: 14px;
+        }
+
+        .progress-section {
+            margin-top: 20px;
+        }
+
+        .progress-info {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            margin: 0 auto;
+        }
+
+        .contact-info, .working-hours {
+            width: 100%;
+        }
+    }
+    </style>
 </body>
 </html> 
